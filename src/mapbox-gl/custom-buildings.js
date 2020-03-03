@@ -25,11 +25,11 @@ const map = new mapboxgl.Map({
 map.on('load', function() {
   map.addSource('poligons', {
     type: 'geojson',
-    data: 'http://localhost:1111/public/polygons_s.json',
+    data: `${sourcesUrl}/public/polygons_s.json`,
   });
   map.addSource('poligons_b', {
     type: 'geojson',
-    data: 'http://localhost:1111/public/polygons_b.json',
+    data: `${sourcesUrl}/public/polygons_b.json`,
   });
   map.addLayer({
     'id': 'poligons_b-fill',

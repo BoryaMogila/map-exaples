@@ -23,7 +23,7 @@ async function makeMap() {
     attribution: 'google',
   }).addTo(mymap);
 
-  const points = await fetch('http://localhost:1111/public/realtiesGeoJson.json').then(res => res.json());
+  const points = await fetch(`${sourcesUrl}/public/realtiesGeoJson.json`).then(res => res.json());
   var geojsonMarkerOptions = {
     radius: 2,
     fillColor: "#ff7800",

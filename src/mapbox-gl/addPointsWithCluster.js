@@ -1,7 +1,7 @@
 export default ({ map }) => {
     map.addSource('points', {
         type: 'geojson',
-        data: 'http://localhost:1111/public/realtiesGeoJson.json',
+        data: `${sourcesUrl}/public/realtiesGeoJson.json`,
         cluster: true,
         clusterMaxZoom: 14,
         clusterRadius: 50

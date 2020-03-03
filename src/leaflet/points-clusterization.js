@@ -25,7 +25,7 @@ async function makeMap() {
     attribution: 'google',
   }).addTo(mymap);
 
-  const { items } = await fetch('http://localhost:1111/public/realties.json').then(res => res.json());
+  const { items } = await fetch(`${sourcesUrl}/public/realties.json`).then(res => res.json());
   const leafletView = new PruneClusterForLeaflet();
   items.forEach(function (item) {
     const marker = new PruneCluster.Marker(item.latitude, item.longitude, {id: item.realty_id});

@@ -1,5 +1,7 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const config = require('config');
 
 const entries = {
   'leaflet-example': {
@@ -59,7 +61,6 @@ const entries = {
     templateSrc: './template.html'
   },
 }
-
 const entry = {};
 
 const htmlPlugins = Object.keys(entries).map(name => {
@@ -76,7 +77,11 @@ console.log(process.env.NODE_ENV)
 module.exports = {
   mode: process.env.NODE_ENV,
   entry,
-  plugins: htmlPlugins,
+  plugins: htmlPlugins.concat(
+    new webpack.DefinePlugin({
+      sourcesUrl: JSON.stringify(config.get('sourcesUrl'))
+    })
+  ),
   output: {
     publicPath:  '/public/dist/',
     path: path.resolve(__dirname, 'public/dist'),

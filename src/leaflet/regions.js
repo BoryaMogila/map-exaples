@@ -23,7 +23,7 @@ async function makeMap() {
     attribution: 'google',
   }).addTo(mymap);
 
-  const ukraine = await fetch('http://localhost:1111/public/ukraine.json').then(res => res.json());
+  const ukraine = await fetch(`${sourcesUrl}1/public/ukraine.json`).then(res => res.json());
   L.geoJSON(ukraine, {
     style:  {color: 'blue', fillOpacity: 0}
   }).eachLayer((layer) => {

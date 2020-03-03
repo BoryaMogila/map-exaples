@@ -1,7 +1,7 @@
 export default ({ map }) => {
     map.addSource('regions', {
         type: 'geojson',
-        data: 'http://localhost:1111/public/ukraine.json',
+        data: `${sourcesUrl}/public/ukraine.json`,
     });
     map.addLayer({
         'id': 'regions-fill',
