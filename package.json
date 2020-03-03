@@ -7,7 +7,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "NODE_ENV=development webpack-dev-server --config webpack.config.js --open --hot --history-api-fallback",
-    "build": "NODE_ENV=production webpack --config webpack.config.js"
+    "build": "NODE_ENV=production webpack --config webpack.config.js",
+    "start": "screen -S map-examples -X quit; screen -S map-examples -d -m bash -c \"node server.js\""
   },
   "dependencies": {
     "config": "^3.3.0",
