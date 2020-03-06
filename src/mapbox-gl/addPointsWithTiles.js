@@ -2,7 +2,7 @@ export default ({ map }) => {
     map.addSource('points', {
         type: 'vector',
         tiles: [
-            'http://local.riastatic.com/tiles3/{z}/{x}/{y}.pbf'
+            "https://api.maptiler.com/tiles/d6ad24ed-11fa-4198-8f00-bb11e4bb4cd3/{z}/{x}/{y}.pbf?key=Y2yCwRrUeDlwmc5HlZhX"
         ]
     });
     map.addLayer({

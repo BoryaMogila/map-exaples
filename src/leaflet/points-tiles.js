@@ -42,7 +42,7 @@ async function makeMap() {
     },
     interactive: true,
   };
-  L.vectorGrid.protobuf('http://local.riastatic.com/tiles3/{z}/{x}/{y}.pbf', vectorTileOptions).addTo(mymap);
+  L.vectorGrid.protobuf("https://api.maptiler.com/tiles/d6ad24ed-11fa-4198-8f00-bb11e4bb4cd3/{z}/{x}/{y}.pbf?key=Y2yCwRrUeDlwmc5HlZhX", vectorTileOptions).addTo(mymap);
 }
 
 makeMap();
