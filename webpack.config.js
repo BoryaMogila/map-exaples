@@ -40,6 +40,10 @@ const entries = {
     src: './src/mapbox-gl/custom-buildings.js',
     templateSrc: './template.html'
   },
+  'mapbox-selected-points': {
+    src: './src/mapbox-gl/selected-points.js',
+    templateSrc: './template.html'
+  },
   'compare-example': {
     src: './src/compareExample.js',
     templateSrc: './compareTemplate.html'
