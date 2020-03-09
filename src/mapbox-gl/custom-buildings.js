@@ -23,18 +23,17 @@ const map = new mapboxgl.Map({
 });
 
 map.on('load', function() {
-  map.addSource('poligons', {
-    type: 'geojson',
-    data: `${sourcesUrl}/public/polygons_s.json`,
-  });
-  map.addSource('poligons_b', {
-    type: 'geojson',
-    data: `${sourcesUrl}/public/polygons_b.json`,
+  map.addSource('buildings', {
+    type: 'vector',
+    tiles: [
+      "https://api.maptiler.com/tiles/915b03e7-b111-4f78-b692-09b721ecdb03/{z}/{x}/{y}.pbf?key=5s6uwWdEU0Qfr1i7Rzyu"
+    ]
   });
   map.addLayer({
-    'id': 'poligons_b-fill',
+    'id': 'polygons-fill',
     'type': 'fill',
-    'source': 'poligons_b',
+    'source': 'buildings',
+    'source-layer': 'polygons',
     'layout': {},
     'paint': {
       'fill-color': '#088',
@@ -42,9 +41,10 @@ map.on('load', function() {
     }
   });
   map.addLayer({
-    'id': 'poligons_b-line',
+    'id': 'polygons-line',
     'type': 'line',
-    'source': 'poligons_b',
+    'source': 'buildings',
+    'source-layer': 'polygons',
     'layout': {},
     'paint': {
       'line-color': '#088',
@@ -52,8 +52,9 @@ map.on('load', function() {
     }
   });
   map.addLayer({
-    'id': 'poligons-fill',
-    'source': 'poligons',
+    'id': 'buildings-fill',
+    'source': 'buildings',
+    'source-layer': 'buildings',
     'type': 'fill-extrusion',
     'minzoom': 12,
     'paint': {

@@ -1,7 +1,7 @@
 export default ({ map }) => {
     map.addSource('points', {
         type: 'geojson',
-        data: `${sourcesUrl}/public/realtiesGeoJson.json`,
+        data: `${sourcesUrl}/public/points.json`,
     });
     map.addLayer({
         id: 'unclustered-point',

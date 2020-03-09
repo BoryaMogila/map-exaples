@@ -28,7 +28,7 @@ async function makeMap() {
     rendererFactory: L.canvas.tile,
     maxNativeZoom: 18,
     vectorTileLayerStyles: {
-      'realties': function(properties, zoom) {
+      'points': function(properties, zoom) {
         return {
           weight: 1,
           color: '#fff',
@@ -42,7 +42,7 @@ async function makeMap() {
     },
     interactive: true,
   };
-  L.vectorGrid.protobuf("https://api.maptiler.com/tiles/d6ad24ed-11fa-4198-8f00-bb11e4bb4cd3/{z}/{x}/{y}.pbf?key=Y2yCwRrUeDlwmc5HlZhX", vectorTileOptions).addTo(mymap);
+  L.vectorGrid.protobuf("https://api.maptiler.com/tiles/13018a04-a7d5-425c-8c49-06f76a51fb9a/{z}/{x}/{y}.pbf?key=GbsS0IEy8mlTGh0voOnx", vectorTileOptions).addTo(mymap);
 }
 
 makeMap();

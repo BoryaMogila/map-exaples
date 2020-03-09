@@ -2,14 +2,14 @@ export default ({ map }) => {
     map.addSource('points', {
         type: 'vector',
         tiles: [
-            "https://api.maptiler.com/tiles/d6ad24ed-11fa-4198-8f00-bb11e4bb4cd3/{z}/{x}/{y}.pbf?key=Y2yCwRrUeDlwmc5HlZhX"
+            "https://api.maptiler.com/tiles/13018a04-a7d5-425c-8c49-06f76a51fb9a/{z}/{x}/{y}.pbf?key=GbsS0IEy8mlTGh0voOnx"
         ]
     });
     map.addLayer({
         'id': 'points',
         'type': 'circle',
         'source': 'points',
-        'source-layer': 'realties',
+        'source-layer': 'points',
         filter: ['!in', 'realtyId', ''],
         paint: {
             'circle-color': 'orange',

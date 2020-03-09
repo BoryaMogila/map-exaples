@@ -25,10 +25,11 @@ async function makeMap() {
     attribution: 'google',
   }).addTo(mymap);
 
-  const { items } = await fetch(`${sourcesUrl}/public/realties.json`).then(res => res.json());
+  const { features } = await fetch(`${sourcesUrl}/public/points.json`).then(res => res.json());
   const leafletView = new PruneClusterForLeaflet();
-  items.forEach(function (item) {
-    const marker = new PruneCluster.Marker(item.latitude, item.longitude, {id: item.realty_id});
+  features.forEach(function (item) {
+    const [longitude, latitude] = item.geometry.coordinates;
+    const marker = new PruneCluster.Marker(latitude, longitude, {id: item.properties.type});
     leafletView.RegisterMarker(marker);
   });
   mymap.addLayer(leafletView);
