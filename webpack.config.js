@@ -24,6 +24,14 @@ const entries = {
     src: './src/mapbox-gl/points-clusterization.js',
     templateSrc: './template.html'
   },
+  'mapbox-points-with-server-clusterization': {
+    src: './src/mapbox-gl/points-with-server-clusterization.js',
+    templateSrc: './template.html'
+  },
+  'mapbox-points-real-time-tiles': {
+    src: './src/mapbox-gl/points-real-time-tiles.js',
+    templateSrc: './template.html'
+  },
   'mapbox-points-tiles': {
     src: './src/mapbox-gl/points-tiles.js',
     templateSrc: './template.html'
