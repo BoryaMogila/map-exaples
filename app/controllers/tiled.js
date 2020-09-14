@@ -8,7 +8,7 @@ const pointsIndex = geojsonVt(
     points,
     {
         maxZoom: 24,
-    },
+    }
 )
 
 module.exports = async (ctx) => {
