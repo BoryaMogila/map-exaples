@@ -4,10 +4,12 @@ const zlib = require('zlib');
 
 const points = require('../../public/points.json');
 
-const pointsIndex = geojsonVt(points,
+const pointsIndex = geojsonVt(
+    points,
     {
         maxZoom: 24,
-    })
+    },
+)
 
 module.exports = async (ctx) => {
     const { x, y, z } = ctx.params || {};
