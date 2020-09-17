@@ -2,7 +2,7 @@ const vtpbf = require('vt-pbf');
 const geojsonVt = require('geojson-vt');
 const zlib = require('zlib');
 
-const points = require('../../public/points.json');
+const points = require('../../public/pointsForTiles.json');
 
 const pointsIndex = geojsonVt(
     points,
